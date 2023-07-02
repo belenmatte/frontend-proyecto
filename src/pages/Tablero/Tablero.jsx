@@ -3,7 +3,8 @@ import axios from 'axios';
 import { AuthContext } from '../../auth/AuthContext';
 import './tablero.css';
 import audioFile from '/public/celebration.mp3';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import VITE_BACKEND_URL from "../../config.js"; 
 
 let id_juego;
 
@@ -25,7 +26,7 @@ function Juego() {
 //llamando a start
 
   useEffect(() => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/start`, {
+    axios.post(`${VITE_BACKEND_URL}/start`, {
       id_user: parseInt(id)
     })
     .then((response) => {
@@ -46,7 +47,7 @@ function Juego() {
 
   useEffect(() => {
     const interval2 = setInterval(() => {
-      axios.get(`${import.meta.env.VITE_BACKEND_URL}/update/${id_juego}`)
+      axios.get(`${VITE_BACKEND_URL}/update/${id_juego}`)
       .then((response) => {
         setTablero(response.data.jugando);
 
@@ -83,7 +84,7 @@ function Juego() {
   }, []);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}/board/boardData`)
+    axios.get(`${VITE_BACKEND_URL}/board/boardData`)
     .then((response) => {
        const data = response.data[0];
 
@@ -159,7 +160,7 @@ function Juego() {
             // Aquí puedes realizar la solicitud Axios al backend con los IDs de las dos cartas
             console.log(selectedCards[0].id,);
             console.log(card.id);
-            axios.post(`${import.meta.env.VITE_BACKEND_URL}/turno`, {
+            axios.post(`${VITE_BACKEND_URL}/turno`, {
               idCarta1: parseInt(selectedCards[0].id),
               idCarta2: parseInt(card.id)
             })

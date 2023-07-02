@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import './login.css';
 import Login from './Login';
+import VITE_BACKEND_URL from "../../config.js";
 
 
 function Signup() {
@@ -16,7 +17,7 @@ function Signup() {
     const handleSubmit = async (event) => {
         event.preventDefault();
     
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup`, {
+        axios.post(`${VITE_BACKEND_URL}/signup`, {
             username: username,
             email: email,
             password: password

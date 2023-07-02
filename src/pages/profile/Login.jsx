@@ -3,6 +3,7 @@ import { AuthContext } from '../../auth/AuthContext';
 import axios from 'axios';
 import './login.css';
 import MainPage from '../MainPage/MainPage';
+import VITE_BACKEND_URL from "../../config.js";
 
 
 function Login() {
@@ -24,7 +25,7 @@ function Login() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+        axios.post(`${VITE_BACKEND_URL}/login`, {
                 email: email,
                 password: password
             }).then((response) => {
