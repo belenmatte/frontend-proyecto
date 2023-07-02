@@ -1,0 +1,211 @@
+.column-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  .column-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .contentx {
+    background-color:#CEE8F2;
+  }
+
+  .content2{
+    display: flex;
+    flex-direction: row;
+  }
+  .name {
+    color: #D91A3D;
+}
+
+  .content1{
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(4, 178, 217, 0.3);
+
+  }
+
+  .container-tablero{
+    display: flex;
+    flex-direction: raw;
+  }
+  
+  
+  .card {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: none;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+    background-color: #D91A3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: none;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background-color: #CEE8F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .card-section {
+    overflow-y: auto;
+  }
+  
+  .board-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+
+  }
+
+  
+  .estadisticas{
+    font-size: 50px;
+    /* color: #1C3640; */
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 0.2em #04B2D9, 0 0 0.2em #04B2D9;
+  
+  }
+
+
+  .info{
+    font-size: 20px;
+    color: #1C3640;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  .info2{
+    font-size: 20px;
+    color: #1C3640;
+    box-shadow: none;
+    text-shadow: 0 0 0.1em #04B2D9, 0 0 0.1em #04B2D9;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .info-row{
+    align-items: center;
+    align-self: center;
+  }
+
+  .info-icon{
+    box-shadow: none;
+    size: 20px;
+  }
+
+  
+  .esperando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .ganador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    text-shadow: 0 0 0.3em #04B2D9, 0 0 0.3em #04B2D9;
+  }
+
+  .puntaje{
+
+    text-shadow: 0 0 0.2em #D91A3D, 0 0 0.2em #D91A3D;
+    text-align: center;
+    justify-self: center;
+
+  }
+  
+
+  .locas {
+    font-size: 30px;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    color: #1C3640;
+  }
+
+  .ganador img {
+    width: 200px;
+    height: auto;
+  }
+  .esperando img {
+    width: 200px;
+    height: auto;
+  }
+
+  .fin{
+    font-size: 40px;
+    text-shadow: 0 0 0.2em #04B2D9, 0 0 0.2em #04B2D9;
+  }
+
+  .finales{
+    font-size: 30px;
+    text-shadow: 0 0 0.2em #D91A3D, 0 0 0.2em #D91A3D;
+  }
