@@ -3,8 +3,8 @@ import axios from 'axios';
 import { AuthContext } from '../../auth/AuthContext';
 import './tablero.css';
 import audioFile from '/public/celebration.mp3';
-import { Link } from 'react-router-dom';
-import VITE_BACKEND_URL from "../../config.js"; 
+import { Link } from 'react-router-dom'; 
+import VITE_BACKEND_URL from "../../config.js";
 
 let id_juego;
 
@@ -26,7 +26,7 @@ function Juego() {
 //llamando a start
 
   useEffect(() => {
-    axios.post(`${VITE_BACKEND_URL}/game`, {
+    axios.post(`${VITE_BACKEND_URL}/start`, {
       id_user: parseInt(id)
     })
     .then((response) => {
