@@ -26,7 +26,7 @@ function Juego() {
 //llamando a start
 
   useEffect(() => {
-    axios.post(`${VITE_BACKEND_URL}/start`, {
+    axios.post(`${VITE_BACKEND_URL}/game`, {
       id_user: parseInt(id)
     })
     .then((response) => {
